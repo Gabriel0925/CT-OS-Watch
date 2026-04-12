@@ -46,7 +46,7 @@ function drawBattery() {
     }
 
     g.setFontAlign(1, -1);
-    g.setFont("4x6", 2);
+    g.setFont("Vector", 16);
     g.drawString(percentageBattery + " %", 176, 1, {filled:true});
 
     // on remet la couleur en noir pour les prochaine écriture
@@ -73,21 +73,21 @@ function drawDateTime() {
     // prépa avant de dessiner
     g.setFontAlign(0,0);
     // config pour hh:mm
-    g.setFont("Vector", 42);
+    g.setFont("Vector", 50);
     // {filled: true} permet de mettre un rectangle de couleur derrière ce qu'on va écrire donc ça "efface" l'ancien affichage
     g.drawString(timeHoursMinutes, 82, 88, {filled: true}); 
 
     // config pour les secondes en plus petit
-    g.setFont("6x8", 2);
-    g.drawString(timeSeconds, 151, 94, {filled: true});
+    g.setFont("Vector", 16);
+    g.drawString(timeSeconds, 160, 100, {filled: true});
 
     // config pour l'affichage du jours
-    g.setFont("6x8");
-    g.drawString(dicoDayWeek[dayWeek], 88, 58, {filled: true});
+    g.setFont("Vector", 18);
+    g.drawString(dicoDayWeek[dayWeek], 95, 50, {filled: true});
 
     // config pour l'affichage du jours
-    g.setFont("6x8");
-    g.drawString(dateToday, 88, 112, {filled: true});
+    g.setFont("Vector", 18);
+    g.drawString(dateToday, 95, 122, {filled: true});
 
     drawBattery();
 
@@ -104,4 +104,3 @@ setWatch(() => {
     clearInterval(refreshWatchface);
     load("launcher.js");
 }, BTN1, {repeat:true, edge: "falling"}); // "falling" : le moment ou tu relaches le bouton et repeat true pour continuer de détecter les clics même si on a deja cliqué sur le bouton
-
