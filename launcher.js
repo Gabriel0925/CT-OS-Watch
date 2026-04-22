@@ -3,19 +3,17 @@ g.clear();
 var menu = {
     "": {"title": "Apps"},
     // Sport
-    "Activity": function() {console.log("Activity");},
-    "History": function() {console.log("History");},
-    "Workout": function() {console.log("Workout");},
+    "Activity": function() {},
+    "History": function() {},
+    "Workout": function() {},
 
     // Analyse sport
-    "Progression": function() {console.log("Progression");},
-    "Training Load": function() {console.log("Training Load");},
+    "Progression": function() {},
 
     // Utilitaire
-    "Alarms": function() {console.log("Alarms");},
-    "Stopwatch": function() {load("app-stopwatch.js");},
-    "Timers": function() {console.log("Timers");},
-    "Weather": function() {console.log("Weather");},
+    "Alarms": function() {},
+    "Stopwatch": function() {},
+    "Timers": function() {},
 
     // Autre
     "Settings": function() {load("app-settings.js");},

@@ -33,7 +33,7 @@ let percentageBattery = E.getBattery();
 function majBattery() {
     percentageBattery = E.getBattery();
 }
-setTimeout(() => {
+let batteryInterval = setInterval(() => {
     majBattery();
 }, 60000); // refresh du pourcentage de la batterie toutes les minutes
 
@@ -102,5 +102,6 @@ drawDateTime();
 // Pour détécter quand il y a un appuie sur le bouton
 setWatch(() => {
     clearInterval(refreshWatchface);
+    clearInterval(batteryInterval);
     load("launcher.js");
 }, BTN1, {repeat:true, edge: "falling"}); // "falling" : le moment ou tu relaches le bouton et repeat true pour continuer de détecter les clics même si on a deja cliqué sur le bouton

@@ -6,11 +6,19 @@ var menu = {
     "Screen": function() {console.log("Screen");},
 
     // Information
-    "About": function() {console.log("About");},
+    "About": function() {about();},
     "Version": function() {console.log("Version");},
 };
 
 E.showMenu(menu);
+
+function about() {
+    g.clear();
+    g.setFontAlign(-1,-1);
+    g.setFont("Vector", 20);
+
+    g.drawString("v1", 82, 88); 
+}
 
 // Pour détécter quand il y a un appuie sur le bouton
 setWatch(() => {
