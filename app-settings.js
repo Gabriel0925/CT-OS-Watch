@@ -13,7 +13,8 @@ function about() {
     g.setFontAlign(-1,-1);
     g.setFont("Vector", 20);
 
-    g.drawString("v0 beta 1", 20, 88); 
+    g.drawString("About", 1, 1);
+    g.drawString("v0 beta 1", 20, 88);
 }
 
 // Pour détécter quand il y a un appuie sur le bouton

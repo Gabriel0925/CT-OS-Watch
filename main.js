@@ -46,7 +46,7 @@ function drawBattery() {
     }
 
     g.setFontAlign(1, -1);
-    g.setFont("Vector", 16);
+    g.setFont("Vector", 20);
     g.drawString(percentageBattery + " %", 176, 1, {filled:true});
 
     // on remet la couleur en noir pour les prochaine écriture
